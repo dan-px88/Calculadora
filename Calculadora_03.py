@@ -18,27 +18,26 @@ def calculator():
 
         # Aquí se evalua el input del usuario como expresion matematica
         try:
-            # Use the eval function to evaluate the expression
-            # The eval function parses the expression passed to this method and executes Python expression(s) passed as a string
+            # Se utiliza la función eval para evaluar la expresion
             result = eval(expression)
             
-            # Print the result of the expression to the user
+            # Se muestra el resultado de la expresión al usuario
             print(f"Result: {result}")
         
-        # Catch any ZeroDivisionError exceptions that occur during evaluation
+        # Detecta cualquier ZeroDivisionError exceptions que pueda llegar a ocurrir
         except ZeroDivisionError:
-            # If a ZeroDivisionError occurs, print an error message to the user
+            # si un ZeroDivisionError ocurre, se le manda un aviso al usuario
             print("Error: Division by zero is not allowed")
         
-        # Catch any SyntaxError exceptions that occur during evaluation
+        # Detecta cualquier SyntaxError exceptions que pueda llegar a ocurrir 
         except SyntaxError:
-            # If a SyntaxError occurs, print an error message to the user
+            # si un SyntaxError ocurre, ps igual se le avisa al usuario
             print("Error: Invalid syntax. Please enter a valid mathematical expression")
         
-        # Catch any other exceptions that occur during evaluation
+        # Detecta cualquier error que pueda llegar a ocurrir
         except Exception as e:
-            # If any other exception occurs, print an error message to the user
+            # Cualquier otro error que pueda llegar a presentarse se le manda un mensaje 
             print(f"Error: {e}")
 
-# Call the calculator function to start the program
+# Aquí se llama la funcion de la calculadora para que ya se pueda ejecutar el programa
 calculator()
